@@ -1,0 +1,53 @@
+@import "_utilities";
+
+body {
+  background: $bodyBackground;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+p, a {
+	font-family: Arial;
+}
+
+header {
+
+  background: rgb(170, 57, 57);
+  padding: 20px 20px 0 20px;
+  &:after {
+    @include clearfix;
+  }
+}
+
+#playerNav {
+  display: inline;
+  float: right;
+}
+
+h1 {
+  font-family: $title;
+  display: inline-block;
+  line-height: 0px;
+  padding-bottom: 10px;
+}
+
+nav ul li a {
+  font-family: $navText;
+  &:hover {
+    color: yellow;
+  }
+}
+
+ul {
+  display: inline-block;
+  li {
+  	list-style: none;
+  	display: inline-block;
+  	a {
+      padding: 10px;
+  	}
+  }
+}

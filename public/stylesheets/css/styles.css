@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+/* Fonts */
+@font-face {
+  font-family: "EntypoRegular";
+  src: url("font/Entypo-webfont.eot");
+  src: url("font/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("font/Entypo-webfont.woff") format("woff"), url("font/Entypo-webfont.ttf") format("truetype"), url("font/Entypo-webfont.svg#Entypo-webfont") format("svg"); }
+
+.column-1 {
+  display: inline-block;
+  padding: 10px;
+  width: 3em;
+  color: #ffeecc;
+  font-size: 1em; }
+
+.column-2 {
+  display: inline-block;
+  padding: 10px;
+  width: 6em;
+  color: #ffeecc;
+  font-size: 2em; }
+
+.column-3 {
+  display: inline-block;
+  padding: 10px;
+  width: 9em;
+  color: #ffeecc;
+  font-size: 3em; }
+
+.ada-bg {
+  background-image: url("../../images/ada_bg.png"); }
+
+.grace-bg {
+  background-image: url("../../images/grace_bg.png"); }
+
+.frances-bg {
+  background-image: url("../../images/frances_bg.png"); }
+
+.barbara-bg {
+  background-image: url("../../images/barbara_bg.png"); }
+
+.anita-bg {
+  background-image: url("../../images/anita_bg.png"); }
+
+.maria-bg {
+  background-image: url("../../images/maria_bg.png"); }
+
+footer nav .icon.youtube {
+  background-position: 0px 0px; }
+
+footer nav .icon.twitter {
+  background-position: -32px 0px; }
+
+footer nav .icon.rss {
+  background-position: -64px 0px; }
+
+footer nav .icon.flickr {
+  background-position: -96px 0px; }
+
+footer nav .icon.facebook {
+  background-position: -128px 0px; }
+
+footer nav .icon.print {
+  background-position: -160px 0px; }
+
+footer nav .icon.youtube {
+  background-position: 0px 0px; }
+
+footer nav .icon.twitter {
+  background-position: -32px 0px; }
+
+footer nav .icon.rss {
+  background-position: -64px 0px; }
+
+footer nav .icon.flickr {
+  background-position: -96px 0px; }
+
+footer nav .icon.facebook {
+  background-position: -128px 0px; }
+
+footer nav .icon.print {
+  background-position: -160px 0px; }
+
+body {
+  background: #f1f1f1; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+p, a {
+  font-family: Arial; }
+
+header {
+  background: #aa3939;
+  padding: 20px 20px 0 20px; }
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+#playerNav {
+  display: inline;
+  float: right; }
+
+h1 {
+  font-family: "Black Ops One", cursive;
+  display: inline-block;
+  line-height: 0px;
+  padding-bottom: 10px; }
+
+nav ul li a {
+  font-family: "Lato", sans-serif; }
+  nav ul li a:hover {
+    color: yellow; }
+
+ul {
+  display: inline-block; }
+  ul li {
+    list-style: none;
+    display: inline-block; }
+    ul li a {
+      padding: 10px; }
