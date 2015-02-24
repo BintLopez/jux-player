@@ -100,13 +100,18 @@ header {
     display: table;
     clear: both; }
 
+#playerContainer {
+  background-image: url("/../images/album-cover.jpg"); }
+
 #playerNav {
   display: inline;
   float: right; }
 
 .albumPlayNav {
-  background: yellow;
+  background: #85e0e4;
   border-radius: 50%; }
+  .albumPlayNav:hover {
+    background: yellow; }
 
 h1 {
   font-family: "Black Ops One", cursive;

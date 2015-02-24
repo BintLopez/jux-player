@@ -22,14 +22,22 @@ header {
   }
 }
 
+#playerContainer {
+  background-image: url('/../images/album-cover.jpg');
+  //background-repeat: repeat-y;
+}
+
 #playerNav {
   display: inline;
   float: right;
 }
 
 .albumPlayNav {
-  background: yellow;
+  background: $songNav;
   border-radius: 50%;
+  &:hover {
+    background: yellow;
+  }
 }
 
 h1 {

@@ -34,12 +34,18 @@
         </div>
         <button id="playPauseBtn" class="btn btn-default" onclick="playPause"><span class="glyphicon glyphicon-play"></span> play/pause</button>
 
+        <div id="playerContainer">
+            <!-- <img src="images/album-cover.jpg"> -->
+            <div class="well">This is where the interactive player journey starts.</div>
 
-        <section ng-model="track" ng-repeat="track in tracks">
-            <!-- <img src="images/{{track.artwork}}"> -->
-            <a class="btn albumPlayNav" ng-click="pauseBtn()" href="#"><span class="glyphicon glyphicon-pause"></span></a>
-              <a class="btn albumPlayNav" ng-click="playBtn()" href="#"><span class="glyphicon glyphicon-play"></span></a>
-        </section>
+            <section ng-model="track" ng-repeat="track in tracks">
+                <!-- <img src="images/{{track.artwork}}"> -->
+                <a class="btn albumPlayNav" ng-click="pauseBtn()" href="#"><span class="glyphicon glyphicon-pause"></span></a>
+                  <a class="btn albumPlayNav" ng-click="playBtn()" href="#"><span class="glyphicon glyphicon-play"></span></a>
+            </section>
+ 
+
+        </div>
         
 
         <script src="player.js"></script>
