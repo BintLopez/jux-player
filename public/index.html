@@ -34,15 +34,16 @@
         </div>
         <button id="playPauseBtn" class="btn btn-default" onclick="playPause"><span class="glyphicon glyphicon-play"></span> play/pause</button>
 
-        <section ng-repeat="track in tracks">
-            <img src="images/{{track.artwork}}">
-            <a class="btn btn-default" ng-click="pauseBtn({{track.id}})" href="#"><span class="glyphicon glyphicon-pause"></span> pause</a>
-              <a class="btn btn-default" ng-click="playBtn({{track.id}})" href="#"><span class="glyphicon glyphicon-play"></span> play</a>
+
+        <section ng-model="track" ng-repeat="track in tracks">
+            <!-- <img src="images/{{track.artwork}}"> -->
+            <a class="btn albumPlayNav" ng-click="pauseBtn()" href="#"><span class="glyphicon glyphicon-pause"></span></a>
+              <a class="btn albumPlayNav" ng-click="playBtn()" href="#"><span class="glyphicon glyphicon-play"></span></a>
         </section>
         
 
         <script src="player.js"></script>
-        <!-- // <script src="soundmanager2.js"></script> -->
+        <script src="soundmanager2.js"></script>
     
     </body>
 </html>

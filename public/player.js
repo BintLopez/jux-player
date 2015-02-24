@@ -4,7 +4,7 @@ SC.initialize({
 
 var isPlaying = false;
 console.log('Song is playing? ' + isPlaying);
-function playPause(SC) {
+function playPause() {
 	if (isPlaying) {
 		obj.pause();
 		console.log('playing? ' + isPlaying);
@@ -40,47 +40,3 @@ $('#playPauseBtn').on("click", playPause);
 //Cookout = 192107993
 // Highway Jane = 192107303
 // Dawn = 192108790
-
-
-
-
-//TO DELETE
-	// if (sound) {
-	// 	if(is_playing) {
-	// 		sound.pause();
-	// 		is_playing = false;
-	// 	}
-	// 	else {
-	// 		sound.play();
-	// 		is_playing = true;
-	// 	}
-	// } 
-	// else {
-		// SC.stream("/tracks/192110152", function(obj){
-		// 	obj.play();
-		// 	sound = obj;
-		// 	is_playing = true;
-		// });
-
-
-
-
-
-    // SC.get('/tracks/192110152', function(track) {
-    //     $('#songsList').html(track.title);
-        //$('#songsList'.append($('<img src="artwork_url">'));
-    
-	// SC.stream("/tracks/293", function(sound){
-	// 	sound.play();
-	// });
-
-
-
-// GOAL - FUNCTION TO SHOW ALL TRACKS BY JUXRAP
-// $(document).ready(function() {
-//   SC.get('/tracks', { genres: 'reggae'}, function(tracks) {
-//   $(tracks).each(function(index, track) {
-//       $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
-//     });
-//   });
-// });

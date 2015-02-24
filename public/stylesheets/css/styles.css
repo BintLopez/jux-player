@@ -104,6 +104,10 @@ header {
   display: inline;
   float: right; }
 
+.albumPlayNav {
+  background: yellow;
+  border-radius: 50%; }
+
 h1 {
   font-family: "Black Ops One", cursive;
   display: inline-block;
