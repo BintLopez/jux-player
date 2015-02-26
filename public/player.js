@@ -30,24 +30,27 @@ angular.module('playerApp', [])
 // 0 = stopped/uninitialised
 //1 = playing or buffering sound (play has been called, waiting for data etc.)
 	};
+	$scope.playPause = 'play'
 	var is_playing = false, sound;
 	$scope.player = function(trackId){
     if( sound ) {
         if(is_playing) {
             sound.pause();
             is_playing = false;
+            $scope.playPause = 'play';
         } else {
             sound.play();
             is_playing = true;
-            return $scope.isPlaying;
+            $scope.playPause = 'pause';
         }
     } else {
+
     	var trackName = "/tracks/"+trackId;
         SC.stream(trackName, function(obj){
             obj.play();
             sound = obj;
             is_playing = true;
-            return $scope.isPlaying;
+            $scope.playPause = 'pause';
         });
     }
 }

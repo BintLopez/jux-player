@@ -31,9 +31,7 @@
 
         <div class="well" id="songsList">
         </div>
-        <button class="btn btn-default" ng-click="playBtn('192107303')"><span class="glyphicon glyphicon-play"></span> play</button>
-        <button class="btn btn-default" ng-click="pauseBtn('192107303')"><span class="glyphicon glyphicon-pause"></span> pause</button>
-        <button class="btn btn-default" ng-click="player('192107303')"></button>
+        <button class="btn btn-default" ng-click="player('192107303')"><span class="glyphicon glyphicon-{{playPause}}"></span> {{playPause}}</button>
 
         <div id="playerContainer">
             <!-- <img src="images/album-cover.jpg"> -->
@@ -41,7 +39,6 @@
 
             <section ng-model="track" ng-repeat="track in tracks">
                 <!-- <img ng-src="images/tracks[$index].artwork"> -->
-                <a class="btn albumPlayNav" ng-click="pauseBtn(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-pause"></span></a>
                   <a class="btn albumPlayNav" ng-click="player(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-play"></span></a>
                   <a href="#">{{track.title}}</a>
             </section>
