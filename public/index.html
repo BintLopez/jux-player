@@ -34,13 +34,14 @@
         </div>
         <button class="btn btn-default" ng-click="playBtn('192107303')"><span class="glyphicon glyphicon-play"></span> play</button>
         <button class="btn btn-default" ng-click="pauseBtn('192107303')"><span class="glyphicon glyphicon-pause"></span> pause</button>
+        <button class="btn btn-default" ng-click="player()"></button>
 
         <div id="playerContainer">
             <!-- <img src="images/album-cover.jpg"> -->
             <div class="well">This is where the interactive player journey starts.</div>
 
             <section ng-model="track" ng-repeat="track in tracks">
-                <!-- <img src="images/{{track.artwork}}"> -->
+                <img ng-src="images/tracks[$index].artwork">
                 <a class="btn albumPlayNav" ng-click="pauseBtn(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-pause"></span></a>
                   <a class="btn albumPlayNav" ng-click="playBtn(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-play"></span></a>
                   <a href="#">{{track.title}}</a>
@@ -51,7 +52,7 @@
         
 
         <script src="player.js"></script>
-        <script src="SoundManager2/script/soundmanager2.js"></script>
+        <!-- // <script src="SoundManager2/script/soundmanager2.js"></script> -->
     
     </body>
 </html>

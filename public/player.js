@@ -29,5 +29,23 @@ angular.module('playerApp', [])
 //playState --     Numeric value indicating the current playing state of the sound.
 // 0 = stopped/uninitialised
 //1 = playing or buffering sound (play has been called, waiting for data etc.)
-		};
+	};
+	var is_playing = false, sound;
+	$scope.player = function(){
+    if( sound ) {
+        if(is_playing) {
+            sound.pause();
+            is_playing = false;
+        } else {
+            sound.play();
+            is_playing = true;
+        }
+    } else {
+        SC.stream("/tracks/293", function(obj){
+            obj.play();
+            sound = obj;
+            is_playing = true;
+        });
+    }
+}
 });
