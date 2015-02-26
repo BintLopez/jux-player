@@ -31,7 +31,7 @@ angular.module('playerApp', [])
 //1 = playing or buffering sound (play has been called, waiting for data etc.)
 	};
 	var is_playing = false, sound;
-	$scope.player = function(){
+	$scope.player = function(trackId){
     if( sound ) {
         if(is_playing) {
             sound.pause();
@@ -39,12 +39,15 @@ angular.module('playerApp', [])
         } else {
             sound.play();
             is_playing = true;
+            return $scope.isPlaying;
         }
     } else {
-        SC.stream("/tracks/293", function(obj){
+    	var trackName = "/tracks/"+trackId;
+        SC.stream(trackName, function(obj){
             obj.play();
             sound = obj;
             is_playing = true;
+            return $scope.isPlaying;
         });
     }
 }
