@@ -16,10 +16,10 @@ angular.module('playerApp', [])
 			sound.play();
 		});
 	};
-	$scope.pauseBtn = function() {
+	$scope.pauseBtn = function(trackId) {
 		SC.stream(function(sound) {
 			SC.sound = sound;
-			sound.stop("/tracks/192110152");
+			sound.stop("/tracks/"+trackId);
 		});
 		
 			//playState --     Numeric value indicating the current playing state of the sound.

@@ -6,7 +6,7 @@ var isPlaying = false;
 console.log('Song is playing? ' + isPlaying);
 function playPause() {
 	if (isPlaying) {
-		obj.pause();
+		sound.pause();
 		console.log('playing? ' + isPlaying);
 		isPlaying = false;
 		return isPlaying;
