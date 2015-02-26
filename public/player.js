@@ -33,6 +33,7 @@ angular.module('playerApp', [])
 	$scope.playPause = 'play'
 	var is_playing = false, sound;
 	$scope.player = function(trackId){
+	$scope.playPause = 'pause';
     if( sound ) {
         if(is_playing) {
             sound.pause();
@@ -44,7 +45,6 @@ angular.module('playerApp', [])
             $scope.playPause = 'pause';
         }
     } else {
-
     	var trackName = "/tracks/"+trackId;
         SC.stream(trackName, function(obj){
             obj.play();
