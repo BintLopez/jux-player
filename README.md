@@ -1,5 +1,8 @@
 #jux-player
 
-So far, a lot of progress on the display, but .play() and .pause() are not currently working.
+Eventually this will be an interactive visual experience to accompany an album.
+
+Working off Soundcloud API and SoundManager2
+AngularJS + NodeJs
 
 
