@@ -2,41 +2,32 @@ SC.initialize({
   client_id: 'b6c9ed268c9b07a27f91e6f6d66e2f88'
 });
 
-var isPlaying = false;
-console.log('Song is playing? ' + isPlaying);
-function playPause() {
-	if (isPlaying) {
-		sound.pause();
-		console.log('playing? ' + isPlaying);
-		isPlaying = false;
-		return isPlaying;
-	}
-	else {
-		SC.stream("tracks/192107303", function(sound) {
-		sound.play();
-		isPlaying = true;
-		return isPlaying;
-	})
-	console.log('Song is playing --'+ isPlaying);
-	}
-};
+angular.module('playerApp', [])
 
+.controller('playerCtrl', function($scope) {
+	$scope.tracks = [
+		{id:'192110152', title: 'Ear Massage'}, 
+		{id: '192109397', title: 'Gypsy Green'}, 
+		{id: '192108435', title: 'reAction'}, 
+		{id: '192107993', title: 'Cookout'}, 
+		{id: '192107303', title: 'Highway Jane'}, 
+		{id: '192108790', title: 'Dawn'}];
 
-$(document).ready(function() {
-
-$('#playPauseBtn').on("click", playPause);
-
- 
-
+	$scope.playBtn = function(trackId) {
+		var trackName = "/tracks/"+trackId;
+		SC.stream(trackName, function(sound){
+			SC.sound = sound;
+			sound.play();
+		});
+	};
+	$scope.pauseBtn = function(trackId) {
+		SC.stream(function(sound) {
+			SC.sound = sound;
+			sound.stop("/tracks/"+trackId);
+		});
+		
+//playState --     Numeric value indicating the current playing state of the sound.
+// 0 = stopped/uninitialised
+//1 = playing or buffering sound (play has been called, waiting for data etc.)
+		};
 });
-
-
-
-//playlist for Earmassage = playlists/82716482
-//Babie = 192110152
-//Ear Massage = 192110152
-//Gypsy Green = 192109397
-//reAction = 192108435
-//Cookout = 192107993
-// Highway Jane = 192107303
-// Dawn = 192108790
