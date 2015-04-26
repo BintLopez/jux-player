@@ -32,6 +32,7 @@
         <div class="well" id="songsList">
         </div>
         <button class="btn btn-default" ng-click="player('192107303')"><span class="glyphicon glyphicon-{{playPause}}"></span> {{playPause}}</button>
+        <a href="">This is where the interactive player journey starts.</a>
 
         <div id="playerContainer">
             <!-- <img src="images/album-cover.jpg"> -->
@@ -39,7 +40,7 @@
 
             <section ng-model="track" ng-repeat="track in tracks">
                 <!-- <img ng-src="images/tracks[$index].artwork"> -->
-                  <a class="btn albumPlayNav" ng-click="player(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-play"></span></a>
+                  <a class="btn albumPlayNav" ng-click="player(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-{{playPause}}"></span></a>
                   <a href="#">{{track.title}}</a>
             </section>
  

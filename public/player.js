@@ -6,12 +6,14 @@ angular.module('playerApp', [])
 
 .controller('playerCtrl', function($scope) {
 	$scope.tracks = [
-		{id:'192110152', title: 'Ear Massage'}, 
+		{id: '192110152', title: 'Ear Massage'}, 
 		{id: '192109397', title: 'Gypsy Green'}, 
 		{id: '192108435', title: 'reAction'}, 
 		{id: '192107993', title: 'Cookout'}, 
 		{id: '192107303', title: 'Highway Jane'}, 
-		{id: '192108790', title: 'Dawn'}];
+		{id: '192108790', title: 'Dawn'}
+		{id: '192106987', title: 'Babie'}
+		];
 
 	$scope.playBtn = function(trackId) {
 		var trackName = "/tracks/"+trackId;
