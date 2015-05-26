@@ -41,7 +41,7 @@
 
             <section ng-model="track" ng-repeat="track in tracks">
                 <!-- <img src="images/{{track.artwork}}"> -->
-                <a class="btn albumPlayNav" ng-click="pauseBtn(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-pause"></span></a>
+                <a class="btn albumPlayNav" ng-click="pauseBtn()" href="#"><span class="glyphicon glyphicon-pause"></span></a>
                   <a class="btn albumPlayNav" ng-click="playBtn(tracks[$index].id)" href="#"><span class="glyphicon glyphicon-play"></span></a>
                   <a href="#">{{track.title}}</a>
             </section>

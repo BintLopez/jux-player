@@ -16,7 +16,7 @@ angular.module('playerApp', [])
 			sound.play();
 		});
 	};
-	$scope.pauseBtn = function(trackId) {
+	$scope.pauseBtn = function() {
 		SC.sound.pause();
 	};
 });
