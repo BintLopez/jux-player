@@ -17,14 +17,7 @@ angular.module('playerApp', [])
 		});
 	};
 	$scope.pauseBtn = function(trackId) {
-		SC.stream(function(sound) {
-			SC.sound = sound;
-			sound.stop("/tracks/"+trackId);
-		});
-		
-			//playState --     Numeric value indicating the current playing state of the sound.
-   // 0 = stopped/uninitialised
-    //1 = playing or buffering sound (play has been called, waiting for data etc.)
-		};
+		SC.sound.pause();
+	};
 });
 
